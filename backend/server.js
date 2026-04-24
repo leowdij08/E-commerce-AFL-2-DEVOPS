@@ -47,7 +47,8 @@ app.use((err, req, res, next) => {
   res.status(500).send({ message: err.message });
 });
 
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 8080;
+// ❌ Kode yang error (kemungkinan besar seperti ini):
 app.listen(port, () => {
-  console.log(`serve at http://localhost:${port}`);
+  console.log(`Server running on port ${port}`);
 });
